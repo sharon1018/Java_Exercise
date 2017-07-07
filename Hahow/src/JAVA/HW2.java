@@ -17,7 +17,6 @@ public class HW2 {
 		cat = tmp.split(",");
 		System.out.println(cat[2]);
 		
-		
 		String dogData = json.replace(catData+"," ,"");//將前面的字串移除取得後半部
 		System.out.println(dogData);
 		String tmp2 = dogData.replace("{", "").replace("}","");
