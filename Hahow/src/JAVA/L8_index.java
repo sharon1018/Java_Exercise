@@ -12,7 +12,7 @@ public class L8_index {
 		System.out.println(str.substring(str.indexOf("b"),str.lastIndexOf("c")+1));
 		
 		
-		//contains
+		//contains return boolean
 		System.out.println(str.contains("z"));
 
 	}
