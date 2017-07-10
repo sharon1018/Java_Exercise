@@ -8,6 +8,7 @@ public class L4_parse {
 		String d9s=String.valueOf(d9);
 		System.out.println(d9s);
 		Double d=Double.parseDouble("3.14");//¦r¦êÂà´«¦¨
+		System.out.println(d);
 	}
 
 }
