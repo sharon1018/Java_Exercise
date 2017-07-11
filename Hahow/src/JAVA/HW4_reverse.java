@@ -22,6 +22,7 @@ public class HW4_reverse {
 		
 		for(int i=0;i<array.length;i++) {
 			result[i]=array[array.length-i-1];//最後一個字元放入第一個(reverse)
+			
 		}
 		return result;	//回傳型態須為char[]	
 	}
