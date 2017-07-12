@@ -83,12 +83,12 @@ public static void copyPictureFile(File source, File dest) {
 	try {
 		fis=new FileInputStream(source);
 		fos=new FileOutputStream(dest);
-		//建立一個buffer,用byte所建立的
+		//建立一個buffer,用byte[]所建立的
 		byte[] buffer= new byte[1024];
-		int off=0;
-		int len=0;
-		while((len=fis.read(buffer))!=-1) {
-			fos.write(buffer, off, len);
+		int off=0;//起始位置
+		int len=0;//長度
+		while((len=fis.read(buffer))!=-1) {//讀資料進來
+			fos.write(buffer, off, len);//寫入檔案
 		}
 		fos.flush();
 		
