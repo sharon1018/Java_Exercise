@@ -17,17 +17,17 @@ public class IOutil {
 		File file=new File(fileName);
 		file.mkdirs();//檔案夾上面還有檔案夾會一起被建立出來
 	}
-public static String[] readFolder(String fileName) {
+	public static String[] readFolder(String fileName) {
 		File file=new File(fileName);
 		return file.list();//先告訴她folder在哪裡 再回傳檔案名稱陣列
 	}
-public static void deleteFolder(String fileName) {
-	File file=new File(fileName);
-	file.delete();
+	public static void deleteFolder(String fileName) {
+		File file=new File(fileName);
+		file.delete();
 }
 
 //讀取檔案內容
-public static void readTextFile(String fileName) { 
+	public static void readTextFile(String fileName) { 
 	//FIleReader fr=new FileReader(fileName);需要try catch包起
 	FileReader fr=null;
 	try {
@@ -52,7 +52,7 @@ public static void readTextFile(String fileName) {
 	}
 	
 }
-public static void writeTextFile(String fileName) {
+	public static void writeTextFile(String fileName) {
 	//FileWriter fw=new FileWriter(fileName);會有例外拋出
 	//FileWriter fw=null;
 	List<String> list=new ArrayList<String>();//先建立arrayList集合包含三個字串
@@ -77,7 +77,7 @@ public static void writeTextFile(String fileName) {
 }
 
 //複製一圖片到資料夾
-public static void copyPictureFile(File source, File dest) {
+	public static void copyPictureFile(File source, File dest) {
 	FileInputStream fis=null;
 	FileOutputStream fos=null;
 	try {
@@ -87,8 +87,8 @@ public static void copyPictureFile(File source, File dest) {
 		byte[] buffer= new byte[1024];
 		int off=0;//起始位置
 		int len=0;//長度
-		while((len=fis.read(buffer))!=-1) {//讀資料進來
-			fos.write(buffer, off, len);//寫入檔案
+		while((len=fis.read(buffer))!=-1) {//讀資料進buffer
+			fos.write(buffer, off, len);//從buffer寫入檔案
 		}
 		fos.flush();
 		

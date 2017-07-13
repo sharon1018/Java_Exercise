@@ -14,17 +14,17 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtil {
+	//讀取資料
 	public static void readFile(String fileName) throws IOException{//拋出例外由demo做處理
 		InputStream is=new FileInputStream(new File(fileName));
 		XSSFWorkbook wb=new XSSFWorkbook(is);//建出一個WB物件
 		//先讀取SHEET在讀ROW在讀CELL
 		XSSFSheet Sheet=wb.getSheetAt(0);//讀取第一個SHEET
 		Iterator itRow=Sheet.rowIterator();//回傳一跌代器
-		
 		while(itRow.hasNext()) {
 			XSSFRow row=(XSSFRow)itRow.next();//轉型成ROW的資料型別才能繼續使用這個物件
-			Iterator itCell=row.cellIterator();
 			
+			Iterator itCell=row.cellIterator();
 			while(itCell.hasNext()) {
 				XSSFCell cell=(XSSFCell)itCell.next();
 				System.out.print(cell+" ");
